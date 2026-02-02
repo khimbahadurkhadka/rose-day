@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Rose Day 🌹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Audio elements -->
+    <audio id="bgMusic" loop>
+        <source src="bgm.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="clickSound">
+        <source src="bgm.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="hoverSound">
+        <source src="bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music control button -->
+    <button class="music-toggle" id="musicToggle" title="Toggle Music">
+        <span class="music-icon">🎵</span>
+    </button>
+
+    <div class="container">
+        <!-- Animated roses background -->
+        <div class="roses-container" id="rosesContainer"></div>
+        
+        <!-- Main content -->
+        <div class="content">
+            <!-- Decorative corner elements -->
+            <div class="corner-decoration top-left">✨</div>
+            <div class="corner-decoration top-right">✨</div>
+            <div class="corner-decoration bottom-left">💖</div>
+            <div class="corner-decoration bottom-right">💖</div>
+
+            <h1 class="main-title">
+                <span class="word" data-delay="0">Happy</span>
+                <span class="word" data-delay="1">Rose</span>
+                <span class="word" data-delay="2">Day</span>
+            </h1>
+            
+            <div class="rose-icon">
+                <div class="rose-frame"><!--Rose red in circle here-->
+                    <img src="rose1.jpg" alt="Beautiful Red Rose" class="rose-image">
+                    <div class="rose-petals-overlay"></div>
+                </div>
+            </div>
+            
+            <p class="subtitle">
+                <span class="subtitle-line">Heera Jee</span><!--Your special person name here-->
+                <span class="subtitle-emoji">💕🥰🌹💕</span>
+            </p>
+            
+            <div class="hearts-container">
+                <span class="heart">❤️</span>
+                <span class="heart">🌹</span>
+                <span class="heart">💕</span>
+                <span class="heart">🌺</span>
+                <span class="heart">💖</span>
+            </div>
+
+            <!-- Interactive message -->
+            <div class="interactive-message">
+                <p class="hint-text">✨ Click the rose for magic ✨</p>
+                <p class="hint-text-small">🌹🥰</p>
+            </div>
+
+            <!-- Love quote -->
+            <div class="quote-container">
+                <p class="quote">"A rose speaks of love silently, in a language known only to the heart."</p>
+            </div>
+        </div>
+        
+        <!-- Particles effect -->
+        <div class="particles" id="particles"></div>
+        
+        <!-- Message box trigger - Right Middle Center -->
+        <div class="message-box-trigger" id="messageBoxTrigger">
+            <span class="trigger-icon">💌</span>
+            <span class="trigger-text">Click Me!</span>
+        </div>
+        
+        <!-- Message box content (hidden initially, shows on click) -->
+        <div class="message-box" id="messageBox">
+            <div class="message-box-bg"></div>
+            <div class="message-box-content">
+                <button class="message-close-btn" id="messageCloseBtn">&times;</button>
+                <h2 class="message-box-title">🌹 Happy Rose Day! 🌹</h2>
+                <p class="message-box-text">Here's a Rose Day wish for you 🌹<br><br>
+                Happy Rose Day! May this beautiful rose remind you of how special you are and how much you are cherished. Just like a rose spreads fragrance and color, may your life be filled with love, happiness, and warmth. May every petal carry joy, every thorn teach strength, and every moment bring a smile to your heart. 🌹✨</p>
+                <div class="social-section">
+                    <p class="social-text">If you like this, please reply 💕</p>
+                    <div class="social-links">
+                        <a href="tel:+9779849764186" class="social-link call" title="Call" aria-label="Call">
+                            <span class="social-icon" aria-hidden="true">📞</span> <!--Number here-->
+                        </a>
+                        <a href="https://wa.me/+9779849764186" target="_blank" class="social-link whatsapp" title="WhatsApp" aria-label="WhatsApp">
+                            <span class="social-icon" aria-hidden="true">WA</span><!--whatsapp number here-->
+                        </a>
+                        <a href="https://m.me/Abgan0khim" target="_blank" class="social-link facebook" title="Messenger" aria-label="Messenger">
+                            <span class="social-icon" aria-hidden="true">✉</span><!--messanger link here-->
+                        </a>
+                        <a href="https://www.facebook.com/Abgan0khim" target="_blank" class="social-link facebook" title="Facebook" aria-label="Facebook">
+                            <span class="social-icon" aria-hidden="true">ⓕ</span><!--Facebook link here-->
+                        </a>
+                        <a href="https://www.instagram.com/Abgan0khim" target="_blank" class="social-link instagram" title="Instagram" aria-label="Instagram">
+                            <span class="social-icon" aria-hidden="true">📷</span><!-- insta link here-->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Left side photo album trigger -->
+        <div class="album-trigger" id="albumTrigger">
+            <span class="trigger-icon">📸</span>
+            <span class="trigger-text">Photo Album</span>
+        </div>
+        
+        <!-- Photo album message box -->
+        <div class="album-box" id="albumBox">
+            <div class="album-bg"></div>
+            <div class="album-content">
+                <button class="album-close-btn" id="albumCloseBtn">&times;</button>
+                <h2 class="album-title">🌹 Beautiful Moments 🌹</h2>
+                <div class="photo-grid">
+                    <div class="photo-item" data-index="0"> <!--Photo 1-->
+                        <img src="img1.jpeg" alt="Beautiful Girl 1">
+                    </div>
+                    <div class="photo-item" data-index="1"><!--Photo 2-->
+                        <img src="img2.jpeg" alt="Beautiful Girl 2">
+                    </div>
+                    <div class="photo-item" data-index="2"><!--Photo 3-->
+                        <img src="img3.png" alt="Beautiful Girl 3">
+                    </div>
+                    <div class="photo-item" data-index="3"><!--Photo 4-->
+                        <img src="img4.jpeg" alt="Beautiful Girl 4">
+                    </div>
+                    <div class="photo-item" data-index="4"><!--Photo 5-->
+                        <img src="img5.jpeg" alt="Beautiful Girl 5">
+                    </div>
+                    <div class="photo-item" data-index="5"><!--Photo 6-->
+                        <img src="img6.jpeg" alt="Beautiful Girl 6">
+                    </div>
+                </div>
+                <p class="album-text">Click on any photo to view 🌟<!--message here--></p>
+            </div>
+        </div>
+        
+        <!-- Image Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" id="lightboxClose">&times;</button>
+            <button class="lightbox-prev" id="lightboxPrev">&#10094;</button>
+            <button class="lightbox-next" id="lightboxNext">&#10095;</button>
+            <div class="lightbox-content">
+                <img src="" alt="Preview" id="lightboxImage">
+                <p class="lightbox-counter" id="lightboxCounter"></p>
+            </div>
+        </div>
+        
+        <!-- Confetti container -->
+        <div class="confetti-container" id="confettiContainer"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
